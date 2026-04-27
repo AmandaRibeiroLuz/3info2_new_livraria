@@ -1,0 +1,21 @@
+--2026-04-14 14:40:55--  https://raw.githubusercontent.com/marrcandre/django-drf-tutorial/refs/heads/main/scripts/core.json
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.109.133, 185.199.110.133, 185.199.111.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.109.133|:443... failed: Connection timed out.
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... failed: Connection timed out.
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.111.133|:443... failed: Connection timed out.
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 359928 (351K) [text/plain]
+Saving to: ‘core.json’
+
+     0K .......... .......... .......... .......... .......... 14% 1.36M 0s
+    50K .......... .......... .......... .......... .......... 28% 2.20M 0s
+   100K .......... .......... .......... .......... .......... 42% 2.11M 0s
+   150K .......... .......... .......... .......... .......... 56% 1.88M 0s
+   200K .......... .......... .......... .......... .......... 71% 2.23M 0s
+   250K .......... .......... .......... .......... .......... 85% 2.30M 0s
+   300K .......... .......... .......... .......... .......... 99% 1.73M 0s
+   350K .                                                     100% 2.78T=0.2s
+
+2026-04-14 14:47:32 (1.92 MB/s) - ‘core.json’ saved [359928/359928]
+
