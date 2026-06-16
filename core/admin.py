@@ -2,9 +2,7 @@
 Django admin customization.
 """
 
-from turtle import register_shape
-
-from django.contrib.admin import ModelAdmin, register
+from django.contrib.admin import ModelAdmin, TabularInline, register
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
 
@@ -27,17 +25,21 @@ class CategoriaAdmin(ModelAdmin):
     list_filter = ('descricao',)
     ordering = ('descricao',)
     list_per_page = 10
-    
-    
+
+
+class ItensCompraInline(TabularInline):
+    model = ItensCompra
+    extra = 1
+
+
 @register(Compra)
 class CompraAdmin(ModelAdmin):
     list_display = ('usuario', 'status')
+    search_fields = ('usuario', 'status')
+    list_filter = ('usuario', 'status')
     ordering = ('usuario', 'status')
     list_per_page = 10
-    
-@register(ItensCompra)
-class ItensCompraAdmin(ModelAdmin):
-    list_per_page = 10
+    inlines = [ItensCompraInline]
 
 
 @register(Editora)
