@@ -6,7 +6,7 @@ from django.contrib.admin import ModelAdmin, register
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
 
-from core.models import Autor, Categoria, Editora, Livro, User
+from core.models import Autor, Categoria, Compra, Editora, Livro, User
 
 
 @register(Autor)
@@ -16,8 +16,8 @@ class AutorAdmin(ModelAdmin):
     list_filter = ('nome',)
     ordering = ('nome', 'email')
     list_per_page = 10
-    
-    
+
+
 @register(Categoria)
 class CategoriaAdmin(ModelAdmin):
     list_display = ('descricao',)
@@ -25,6 +25,14 @@ class CategoriaAdmin(ModelAdmin):
     list_filter = ('descricao',)
     ordering = ('descricao',)
     list_per_page = 10
+    
+    
+@register(Compra)
+class CompraAdmin(ModelAdmin):
+    list_display = ('usuario', 'status')
+    ordering = ('usuario', 'status')
+    list_per_page = 10
+
 
 @register(Editora)
 class EditoraAdmin(ModelAdmin):
@@ -34,6 +42,7 @@ class EditoraAdmin(ModelAdmin):
     ordering = ('nome', 'email', 'cidade')
     list_per_page = 10
 
+
 @register(Livro)
 class LivroAdmin(ModelAdmin):
     list_display = ('titulo', 'editora', 'categoria', 'preco')
@@ -41,6 +50,7 @@ class LivroAdmin(ModelAdmin):
     list_filter = ('editora', 'categoria')
     ordering = ('titulo', 'editora', 'categoria')
     list_per_page = 25
+
 
 @register(User)
 class UserAdmin(BaseUserAdmin):
@@ -50,7 +60,7 @@ class UserAdmin(BaseUserAdmin):
     list_display = ['email', 'name']
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        (_('Personal Info'), {'fields': ('name',)}),
+        (_('Personal Info'), {'fields': ('name', 'foto')}),
         (
             _('Permissions'),
             {
