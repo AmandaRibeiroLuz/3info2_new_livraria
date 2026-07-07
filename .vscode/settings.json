@@ -1,9 +1,10 @@
 {
+
   "python.analysis.extraPaths": [
-    "${workspaceFolder}/__pypackages__/3.12/lib"
+    "${workspaceFolder}/__pypackages__/3.13/lib"
   ],
   "python.autoComplete.extraPaths": [
-    "${workspaceFolder}/__pypackages__/3.12/lib"
+    "${workspaceFolder}/__pypackages__/3.13/lib"
   ],
   "python.analysis.autoImportCompletions": true,
   "peacock.color": "#f9e64f",
@@ -29,5 +30,6 @@
     "titleBar.inactiveBackground": "#f9e64f99",
     "titleBar.inactiveForeground": "#15202b99"
   },
-  "peacock.remoteColor": "#dd0531"
+  "peacock.remoteColor": "#dd0531",
+  "python-envs.defaultEnvManager": "ms-python.python:system"
 }
