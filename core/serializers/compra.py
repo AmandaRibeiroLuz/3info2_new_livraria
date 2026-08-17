@@ -1,4 +1,5 @@
-from rest_framework.serializers import (CharField, CurrentUserDefault, HiddenField, ModelSerializer, SerializerMethodField, ValidationError)
+from rest_framework.serializers import CharField, ModelSerializer, SerializerMethodField, ValidationError
+
 from core.models import Compra, ItensCompra
 
 
