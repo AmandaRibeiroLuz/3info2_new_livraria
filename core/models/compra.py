@@ -17,6 +17,8 @@ class Compra(models.Model):
     @property
     def total(self):
         return sum(item.preco * item.quantidade for item in self.itens.all())
+
+
 class ItensCompra(models.Model):
     compra = models.ForeignKey(Compra, on_delete=models.CASCADE, related_name='itens')
     livro = models.ForeignKey(Livro, on_delete=models.PROTECT, related_name='+')
