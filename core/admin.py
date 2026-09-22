@@ -34,10 +34,10 @@ class ItensCompraInline(TabularInline):
 
 @register(Compra)
 class CompraAdmin(ModelAdmin):
-    list_display = ('usuario', 'status', 'total_formatado')
-    search_fields = ('usuario', 'status')
-    list_filter = ('usuario', 'status')
-    ordering = ('usuario', 'status')
+    list_display = ('usuario', 'status', 'total_formatado','data')
+    search_fields = ('usuario', 'status', 'data')
+    list_filter = ('usuario', 'status', 'data')
+    ordering = ('usuario', 'status', 'data')
     list_per_page = 10
     inlines = [ItensCompraInline]
     readonly_fields = ('total_formatado',)
